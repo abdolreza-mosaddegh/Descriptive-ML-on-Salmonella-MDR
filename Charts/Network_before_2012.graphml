@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d1" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d0" for="edge" attr.name="color" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="Tetracycline" />
+    <node id="SEROTYPE:Typhimurium" />
+    <node id="Nalidixic acid" />
+    <node id="SEROTYPE:Dublin" />
+    <node id="SEROTYPE:Kentucky" />
+    <node id="SEROTYPE:Meleagridis" />
+    <node id="Ceftriaxone" />
+    <node id="Gentamicin" />
+    <node id="Chloramphenicol" />
+    <node id="Ampicillin" />
+    <node id="Sulfisoxazole" />
+    <node id="Cefoxitin" />
+    <node id="Trimethoprim-Sulfamethoxazole" />
+    <node id="Ciprofloxacin" />
+    <node id="Amoxicillin-Clavulanic Acid" />
+    <edge source="Tetracycline" target="SEROTYPE:Typhimurium">
+      <data key="d0">#8c564b</data>
+      <data key="d1">1.5972013993003498</data>
+    </edge>
+    <edge source="Tetracycline" target="SEROTYPE:Kentucky">
+      <data key="d0">#8c564b</data>
+      <data key="d1">1.2304815334268349</data>
+    </edge>
+    <edge source="Tetracycline" target="SEROTYPE:Meleagridis">
+      <data key="d0">#8c564b</data>
+      <data key="d1">1.0379572118702554</data>
+    </edge>
+    <edge source="Tetracycline" target="SEROTYPE:Dublin">
+      <data key="d0">#8c564b</data>
+      <data key="d1">2.414235920014676</data>
+    </edge>
+    <edge source="SEROTYPE:Typhimurium" target="Ceftriaxone">
+      <data key="d0">#98df8a</data>
+      <data key="d1">1.6464148877941982</data>
+    </edge>
+    <edge source="SEROTYPE:Typhimurium" target="Chloramphenicol">
+      <data key="d0">#aec7e8</data>
+      <data key="d1">1.915360501567398</data>
+    </edge>
+    <edge source="SEROTYPE:Typhimurium" target="Trimethoprim-Sulfamethoxazole">
+      <data key="d0">#c5b0d5</data>
+      <data key="d1">2.593103448275862</data>
+    </edge>
+    <edge source="SEROTYPE:Typhimurium" target="Ampicillin">
+      <data key="d0">#ffbb78</data>
+      <data key="d1">2.593103448275862</data>
+    </edge>
+    <edge source="SEROTYPE:Typhimurium" target="Sulfisoxazole">
+      <data key="d0">#ff9896</data>
+      <data key="d1">2.295977011494253</data>
+    </edge>
+    <edge source="SEROTYPE:Typhimurium" target="Cefoxitin">
+      <data key="d0">#98df8a</data>
+      <data key="d1">1.7580362361192285</data>
+    </edge>
+    <edge source="SEROTYPE:Typhimurium" target="Amoxicillin-Clavulanic Acid">
+      <data key="d0">#ffbb78</data>
+      <data key="d1">1.6206896551724137</data>
+    </edge>
+    <edge source="Nalidixic acid" target="SEROTYPE:Dublin">
+      <data key="d0">#9467bd</data>
+      <data key="d1">4.3268124280782505</data>
+    </edge>
+    <edge source="Nalidixic acid" target="SEROTYPE:Meleagridis">
+      <data key="d0">#9467bd</data>
+      <data key="d1">1.6277056277056277</data>
+    </edge>
+    <edge source="SEROTYPE:Dublin" target="Gentamicin">
+      <data key="d0">#1f77b4</data>
+      <data key="d1">4.7594936708860756</data>
+    </edge>
+    <edge source="SEROTYPE:Dublin" target="Chloramphenicol">
+      <data key="d0">#aec7e8</data>
+      <data key="d1">3.7318757192174914</data>
+    </edge>
+    <edge source="SEROTYPE:Dublin" target="Ampicillin">
+      <data key="d0">#ffbb78</data>
+      <data key="d1">3.510126582278481</data>
+    </edge>
+    <edge source="SEROTYPE:Dublin" target="Sulfisoxazole">
+      <data key="d0">#ff9896</data>
+      <data key="d1">3.520042194092827</data>
+    </edge>
+    <edge source="SEROTYPE:Dublin" target="Cefoxitin">
+      <data key="d0">#98df8a</data>
+      <data key="d1">3.7107916756060932</data>
+    </edge>
+    <edge source="SEROTYPE:Dublin" target="Trimethoprim-Sulfamethoxazole">
+      <data key="d0">#c5b0d5</data>
+      <data key="d1">2.8556962025316457</data>
+    </edge>
+    <edge source="SEROTYPE:Dublin" target="Ciprofloxacin">
+      <data key="d0">#d62728</data>
+      <data key="d1">4.362869198312236</data>
+    </edge>
+    <edge source="SEROTYPE:Dublin" target="Amoxicillin-Clavulanic Acid">
+      <data key="d0">#ffbb78</data>
+      <data key="d1">3.7927215189873418</data>
+    </edge>
+    <edge source="SEROTYPE:Dublin" target="Ceftriaxone">
+      <data key="d0">#98df8a</data>
+      <data key="d1">3.7773759292746636</data>
+    </edge>
+    <edge source="SEROTYPE:Meleagridis" target="Trimethoprim-Sulfamethoxazole">
+      <data key="d0">#c5b0d5</data>
+      <data key="d1">3.580952380952381</data>
+    </edge>
+    <edge source="SEROTYPE:Meleagridis" target="Ciprofloxacin">
+      <data key="d0">#d62728</data>
+      <data key="d1">1.492063492063492</data>
+    </edge>
+  </graph>
+</graphml>

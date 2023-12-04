@@ -1,0 +1,145 @@
+before_2012:
+    thresholds: {
+    support_threshold : 0.03,               #Default Support threshold for association mining (Default is 0.05)
+    real_support_threshold : 0.07,          #Default complementary Support threshold for association mining (Default is 0.1)
+    confidence_threshold : 0.80,            #Default Confidence threshold for association mining (Default is 0.80)
+    lift_threshold: 1.5                     #Default Lift threshold for association mining (Default is 1.5)
+    }
+    transactions: {
+    sampling_condition : "year < 2012" ,   #Condition for selecting subjects ('' indicates all subjects should be involved)
+    test_data_condition : "" ,              #Condition for selecting test data, it overrides test_data_percentage ratio ('' indicates no condition and test_data_percentage is used)
+    test_data_percentage : 0.0,             #Percentage of test data (Default is 0.25)
+    excluded_vars : [                       #Excluded variables from transactions used for association mining
+         'Year'
+        ,'DATA_SOURCE'
+      ],
+    data_sources : {                       #Included variables considered collectively in association mining ('*' indicates all variables are involved)
+      'NARM_Cattle_S_HACCP_2010_2013_View': '*'
+      },
+    trans_id : {                           #Field in the database as a unique id of transaction
+      'ID' : 'NARM_Cattle_S_HACCP_2010_2013_View'
+      },
+    cohort_group : [                       #Included cohorts in association mining (cohorts based on Antibiotics categories or demographics, etc.)
+      ]
+    }
+    rules: {
+    correlation_target: 'Drug',             #'Drug' and 'Class' (Default is 'Drug')
+    apply_complementary_support : True,     #Apply complementary support (RAR or Cross-ratio support) on association rules (Default is True)
+    rule_by_cohort : False,                 #Distinct rule mining for each cohort, otherwise same rules for all included cohorts (Default is False)
+    only_one_to_one_association : False,    #Only association with one antecedent and one consequent are considered (Default is False)
+    combine_rules : False,                  #Combine rules with a same antecedent and different consequent (Default is True)
+    pruning_rules : True,                   #Remove any rule contains additional antecedents but having less lift factor comparing another rule (Default is True)
+    clean_previous_rules: False,            #Remove previous recorded rules in the database (Default is False)
+    association_antecedent : {              #Desired rule antecedents in association rules (No value indicates all the fields are included). Interested features could be referenced (Default is No value)
+      },
+    association_consequent : {              #Desired rule consequent in association rules (No value indicates all the itemsets are included). Exact itemsets should be referenced (Default is No value)
+      },
+    focused_patterns : [                    #Interested Patterns including intermediate ,resistant ,susceptible (Default is ['resistant', 'intermediate'] )
+       'resistant'
+      ,'intermediate'
+      ]
+    }  
+    visualization: {
+    graph_types : [                        #Graphs for visulizing association rules ('3dScatter','Arrows','Chord')
+       '3dScatter', 
+       'Chord'
+      ],
+    rule_weight_factor : 'lift',           #Attribute of rules used for weights in graphs
+    rules_to_visualize_cond : {            #Desired rules in the rule-set for visualization
+      },
+    hidden_vars_in_graph : [               #Variables not shown in the association graph (But exist in Association Rules)
+      ],
+    grouping_conditions: {                 #Conditions for grouping nodes in graphs  
+      },
+    graph_parameters: {                    #Parameters specific to each graph
+      'Arrows': {
+        'label_margin' : 0.1
+        },
+      'Chord' : {
+        'size':250,'rotation':0 , 'label_font_size':'10pt', 'title_changes':{'SEROTYPE:':'','gene:':'',':resistant':'',':intermediate':''} 
+        }
+      }
+    }
+    models: {
+    Agnes_model : True,                   #Create Clustering Model on Transactions (Default is True)
+    Dtree_model : False                   #Create Dtree Model on Transactions (Default is True)  
+    }
+    os: {
+    chart_folder : "charts"                #Folder for saving charts
+    }
+    database: {
+    db_connection_string : "DSN=SalDSN;Database=SalDB"
+    }
+
+after_2012:
+    thresholds: {
+    support_threshold : 0.03,               #Default Support threshold for association mining (Default is 0.05)
+    real_support_threshold : 0.07,          #Default complementary Support threshold for association mining (Default is 0.1)
+    confidence_threshold : 0.80,            #Default Confidence threshold for association mining (Default is 0.80)
+    lift_threshold: 1.5                     #Default Lift threshold for association mining (Default is 1.5)
+    }
+    transactions: {
+    sampling_condition : "year >= 2012" ,   #Condition for selecting subjects ('' indicates all subjects should be involved)
+    test_data_condition : "" ,              #Condition for selecting test data, it overrides test_data_percentage ratio ('' indicates no condition and test_data_percentage is used)
+    test_data_percentage : 0.0,             #Percentage of test data (Default is 0.25)
+    excluded_vars : [                       #Excluded variables from transactions used for association mining
+         'Year'
+        ,'DATA_SOURCE'
+      ],
+    data_sources : {                       #Included variables considered collectively in association mining ('*' indicates all variables are involved)
+      'NARM_Cattle_S_HACCP_2010_2013_View': '*'
+      },
+    trans_id : {                           #Field in the database as a unique id of transaction
+      'ID' : 'NARM_Cattle_S_HACCP_2010_2013_View'
+      },
+    cohort_group : [                       #Included cohorts in association mining (cohorts based on Antibiotics categories or demographics, etc.)
+      ]
+    }
+    rules: {
+    correlation_target: 'Drug',             #'Drug' and 'Class' (Default is 'Drug')
+    apply_complementary_support : True,     #Apply complementary support (RAR or Cross-ratio support) on association rules (Default is True)
+    rule_by_cohort : False,                 #Distinct rule mining for each cohort, otherwise same rules for all included cohorts (Default is False)
+    only_one_to_one_association : False,    #Only association with one antecedent and one consequent are considered (Default is False)
+    combine_rules : False,                  #Combine rules with a same antecedent and different consequent (Default is True)
+    pruning_rules : True,                   #Remove any rule contains additional antecedents but having less lift factor comparing another rule (Default is True)
+    clean_previous_rules: False,            #Remove previous recorded rules in the database (Default is False)
+    association_antecedent : {              #Desired rule antecedents in association rules (No value indicates all the fields are included). Interested features could be referenced (Default is No value)
+      },
+    association_consequent : {              #Desired rule consequent in association rules (No value indicates all the itemsets are included). Exact itemsets should be referenced (Default is No value)
+      },
+    focused_patterns : [                    #Interested Patterns including intermediate ,resistant ,susceptible (Default is ['resistant', 'intermediate'] )
+       'resistant'
+      ,'intermediate'
+      ]
+    }  
+    visualization: {
+    graph_types : [                        #Graphs for visulizing association rules ('3dScatter','Arrows','Chord')
+       '3dScatter', 
+       'Chord'
+      ],
+    rule_weight_factor : 'lift',           #Attribute of rules used for weights in graphs
+    rules_to_visualize_cond : {            #Desired rules in the rule-set for visualization
+      },
+    hidden_vars_in_graph : [               #Variables not shown in the association graph (But exist in Association Rules)
+      ],
+    grouping_conditions: {                 #Conditions for grouping nodes in graphs  
+      },
+    graph_parameters: {                    #Parameters specific to each graph
+      'Arrows': {
+        'label_margin' : 0.1
+        },
+      'Chord' : {
+        'size':250,'rotation':0 , 'label_font_size':'10pt', 'title_changes':{'SEROTYPE:':'','gene:':'',':resistant':'',':intermediate':''} 
+        }
+      }
+    }
+    models: {
+    Agnes_model : True,                   #Create Clustering Model on Transactions (Default is True)
+    Dtree_model : False                   #Create Dtree Model on Transactions (Default is True)  
+    }
+    os: {
+    chart_folder : "charts"                #Folder for saving charts
+    }
+    database: {
+    db_connection_string : "DSN=SalDSN;Database=SalDB"
+    }
