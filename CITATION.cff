@@ -12,3 +12,6 @@ authors:
   - family-names: Cazer
     given-names: Casey
 title: "Descriptive machine learning models of multidrug resistance patterns in Salmonella"
+identifiers:
+  - type: url
+    value: https://github.com/abdolreza-mosaddegh/Descriptive-ML-on-Salmonella-MDR
