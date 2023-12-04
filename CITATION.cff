@@ -3,5 +3,12 @@ message: "If you use this software, please cite it as below."
 authors:
   - family-names: Mosaddegh
     given-names: Abdolreza
-    orcid: https://orcid.org/0000-0001-5840-3628
-title: "Descriptive machine learning approaches on multidrug resistance patterns in Salmonella"
+  - family-names: Cobo Angel
+    given-names: Claudia
+  - family-names: Craig
+    given-names: Maya
+  - family-names: Cummings
+    given-names: Kevin
+  - family-names: Cazer
+    given-names: Casey
+title: "Descriptive machine learning models of multidrug resistance patterns in Salmonella"
