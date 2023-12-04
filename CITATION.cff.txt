@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Mosaddegh
+    given-names: Abdolreza
+    orcid: https://orcid.org/0000-0001-5840-3628
+title: "Descriptive machine learning approaches on multidrug resistance patterns in Salmonella"
